@@ -37,7 +37,7 @@
                 <objectAnimator
                     android:duration="3000"
                     android:propertyName="pathData"
-                    android:valueFrom="M300,70 l 0,-70 70,0  0,140 -70,0 z"
+                    android:valueFrom="M300,70 l 0,-70 70,0 0,140 -70,0 z"
                     android:valueTo="M300,70 l 0,-70 70,70 0,0 -70,70z"
                     android:valueType="pathType" />
             </set>

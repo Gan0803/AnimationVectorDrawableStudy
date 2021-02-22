@@ -24,7 +24,7 @@
     <target android:name="rotationGroup">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:duration="500"
+                android:duration="300"
                 android:propertyName="rotation"
                 android:valueFrom="360"
                 android:valueTo="0" />
@@ -35,7 +35,7 @@
         <aapt:attr name="android:animation">
             <set>
                 <objectAnimator
-                    android:duration="500"
+                    android:duration="300"
                     android:propertyName="pathData"
                     android:valueFrom="@string/path_pause"
                     android:valueTo="@string/path_play"

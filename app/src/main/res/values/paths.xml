@@ -14,6 +14,7 @@
         z
     </string>
 
+
     <string name="path_pause">
         M12,10
         L20,10
@@ -24,6 +25,38 @@
         L36,10
         L36,38
         L28,38
+        z
+    </string>
+
+    <string name="path_play2">
+        M8,5
+        v14
+        h0
+        l11,-7
+        l0,0
+        v0
+        z
+        M8,5
+        v14
+        h0
+        l11,-7
+        h0
+        z
+    </string>
+
+    <string name="path_pause2">
+        M6,19
+        v0
+        h4
+        l0,-14
+        l-4,0
+        v14
+        z
+        M14,5
+        v14
+        h4
+        l0,-14
+        h-4
         z
     </string>
 
