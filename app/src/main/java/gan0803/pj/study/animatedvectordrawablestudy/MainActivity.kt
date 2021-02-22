@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
         const val STATE_PLAY = 1
     }
 
-    private var state = STATE_TRIANGLE
+    private var state1 = STATE_TRIANGLE
+    private var state2 = STATE_PAUSE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +24,11 @@ class MainActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
             val imageButton = it as ImageButton
             var drawable = R.drawable.triangle_to_rect
-            if (state == STATE_RECT) {
+            if (state1 == STATE_RECT) {
                 drawable = R.drawable.rect_to_triangle
-                state = STATE_TRIANGLE
+                state1 = STATE_TRIANGLE
             } else {
-                state = STATE_RECT
+                state1 = STATE_RECT
             }
             imageButton.setImageDrawable(ResourcesCompat.getDrawable(resources, drawable, null))
             val animatable: Animatable = imageButton.drawable as Animatable
@@ -37,11 +38,11 @@ class MainActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.imageButton2).setOnClickListener {
             val imageButton = it as ImageButton
             var drawable = R.drawable.pause_to_play
-            if (state == STATE_PLAY) {
+            if (state2 == STATE_PLAY) {
                 drawable = R.drawable.play_to_pause
-                state = STATE_PAUSE
+                state2 = STATE_PAUSE
             } else {
-                state = STATE_PLAY
+                state2 = STATE_PLAY
             }
             imageButton.setImageDrawable(ResourcesCompat.getDrawable(resources, drawable, null))
             val animatable: Animatable = imageButton.drawable as Animatable
