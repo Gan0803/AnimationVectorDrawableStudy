@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val STATE_TRIANGLE = 0
         const val STATE_RECT = 1
+        const val STATE_PAUSE = 0
+        const val STATE_PLAY = 1
     }
 
     private var state = STATE_TRIANGLE
@@ -32,5 +34,18 @@ class MainActivity : AppCompatActivity() {
             animatable.start()
         }
 
+        findViewById<ImageButton>(R.id.imageButton2).setOnClickListener {
+            val imageButton = it as ImageButton
+            var drawable = R.drawable.pause_to_play
+            if (state == STATE_PLAY) {
+                drawable = R.drawable.play_to_pause
+                state = STATE_PAUSE
+            } else {
+                state = STATE_PLAY
+            }
+            imageButton.setImageDrawable(ResourcesCompat.getDrawable(resources, drawable, null))
+            val animatable: Animatable = imageButton.drawable as Animatable
+            animatable.start()
+        }
     }
 }
